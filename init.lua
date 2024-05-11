@@ -81,6 +81,12 @@ vim.schedule(function()
   require "mappings"
 end)
 
+vim.keymap.set('i', '<M-BS>', '<C-W>', { noremap = true, silent = true })
+vim.keymap.set('n', '<M-Left>', '<b>', { noremap = true, silent = true })
+vim.keymap.set('n', '<M-Right>', '<w>', { noremap = true, silent = true })
+vim.keymap.set('i', '<M-Left>', '<C-o>b', { noremap = true, silent = true })
+vim.keymap.set('i', '<M-Right>', '<C-o>w', { noremap = true, silent = true })
+
 if vim.g.neovide then
     -- Put anything you want to happen only in Neovide here
   vim.o.guifont = "JetBrainsMono Nerd Font:h18"
